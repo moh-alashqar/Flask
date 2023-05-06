@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .row {
+            display: flex;
+            }
+
+        .color0, .color1 {
+            width: 30px;
+            height: 30px;
+        }
+
+        .color0 {
+            background-color: {{ color0 }};
+        }
+
+        .color1 {
+            background-color: {{ color1 }};
+        }
+    </style>
+    <title>Checkerboard</title>
+    <div class="container">
+        {% for i in range(0, y) %}
+            <div class="row">
+                {% for j in range(0, x) %}
+                    <div class="color{{ (i+j)%2 }}"></div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</head>
+<body>
+</body>
+</html>

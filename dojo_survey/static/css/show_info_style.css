@@ -1,0 +1,37 @@
+body {
+    margin-top: 200px;
+}
+h1 {
+    font-size: 14pt;
+}
+.container {
+    box-shadow: 0px 0px 1px 0.1px  black;
+    font-size: 11pt;
+    margin: auto;
+    width: 20%;
+    padding: 20px;
+}
+tr {
+    display: flex;
+    justify-content: space-between;
+}
+table {
+    width: 100%;
+}
+h1 {
+    text-decoration: underline;
+}
+a {
+    text-decoration: none;
+    background-color: #76A5AF;
+    color: white;
+    padding: 2px 5px;
+    box-shadow: 0px 0px 3px 0.1px black;
+    cursor: pointer;
+    border: 0px;
+}
+.back_button {
+    margin-top: 15px;
+    display: flex;
+    justify-content: end;
+}

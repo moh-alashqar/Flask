@@ -1,0 +1,18 @@
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 200px;
+}
+.input_text {
+    display: block;
+    margin: auto;
+}
+.description {
+    font-size: 9pt;
+    font-weight: 100;
+}
+.input_button {
+    margin-top: 10px;
+}

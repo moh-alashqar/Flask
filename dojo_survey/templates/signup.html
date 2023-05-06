@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="{{  url_for('static', filename='css/signup_style.css')  }}">
+</head>
+<body>
+    <form action="/process" method="post">
+        <div class="inline_div">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name">
+        </div>
+        <div class="inline_div">
+            <label for="location">Dojo Location:</label>
+            <select name="location">
+                <option value="Ramallah">Ramallah</option>
+                <option value="Gaza">Gaza</option>
+                <option value="Nablus">Nablus</option>
+                <option value="Tulkarm">Tulkarm</option>
+            </select>
+        </div>
+        <div class="inline_div">
+            <label for="lang">Favorite Language:</label>
+                <select name="lang">
+                    <option value="C++">C++</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                    <option value="Javascript">Javascript</option>
+                </select>
+        </div>
+        <div class="radio_input">
+            <div>
+                <label for="m_status">Marital status:</label>
+                <div class="select">
+                    <label for="m_status">Married</label>
+                    <input type="radio" id="m_status" name="m_status" value="Married">
+                </div>
+                <div class="select">
+                    <label for="m_status">Single</label>
+                    <input type="radio" id="m_status" name="m_status" value="Single">
+                </div>
+            </div>
+        </div>
+        <div class="select">
+            <label for="ninja">A Dojo Ninja?</label>
+            <input type="checkbox" id="ninja" name="ninja" vlaue="yes">
+        </div>
+        <div>
+            <label for="comment">Comment (optional):</label>
+            <textarea class="textarea" name="comment" ></textarea>
+        </div>
+        <div class="submit_button">
+            <button>Submit</button>
+        </div>
+    </form>
+</body>
+</html>

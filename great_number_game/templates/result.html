@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result_style.css') }}">
+    <style>
+        .result_container {
+            background-color: {{ color }};
+        }
+        .again_button {
+            {% if not done: %}
+            display: none;
+            {% endif %}
+        }
+        .interact {
+            {% if done: %}
+            display: none;
+            {% endif %}
+        }
+    </style>
+</head>
+<body>
+    <form action="/process" class="container" method="post">
+        <div class="title">
+            <h1>Welcome to the Great Number Game!</h1>
+        </div>
+        <div class="description">
+            <h2>I am thinking of a number betweeen 1 and 100</h2>
+            <h2>Take a guess!</h2>
+        </div>
+        <div class="result_container">
+            <div class="main_container">
+                <div class="status_container">
+                    <p class="status">{{ result }}</p>
+                </div>
+                <p class="status">Attempts: {{ attempts }}</p>
+                <a class="again_button" href="/end">Play again!</a>
+            </div>
+        </div>
+        <div class="interact">
+            <input type="text" name="guessed_number" class="input_text">
+            <button class="input_button">Submit</button>
+        </div>
+</body>
+</html>

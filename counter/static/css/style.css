@@ -1,0 +1,26 @@
+.container {
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 300px;
+    font-family: monospace;
+}
+h2 {
+    margin-bottom: 30px;
+}
+a {
+    padding: 10px 25px;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+.add {
+    background-color: #28804F;
+}
+.reset {
+    background-color: #EC7479;
+}
+.increment {
+    margin-top: 30px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Dojo Gold</title>
+</head>
+<body>
+    <div id="header">
+        <div id="score_container">
+            <p>Your Gold: <p id="score">{{ session['points'] }}</p></p>
+        </div>
+        <a id="start_again"href="start_again">Start Again!</a>
+    </div>
+    <div id="main">
+        <div id="forms_container">
+            <form class="sections_container" action="process_money" method="post">
+                <div class="section">
+                    <h1 class="section_title">Farm</h1>
+                    <h2 class="section_description">(earns 10-20 golds)</h2>
+                    <input class="submit" type="submit" value="Find Gold!">
+                    <input type="hidden" value="Farm" name="which_section">
+                </div>
+            </form>
+            <form class="sections_container" action="process_money" method="post">
+                <div class="section">
+                    <h1 class="section_title">Cave</h1>
+                    <h2 class="section_description">(earns 5-10 golds)</h2>
+                    <input class="submit" type="submit" value="Find Gold!">
+                    <input type="hidden" value="Cave" name="which_section">
+                </div>
+            </form>
+            <form class="sections_container" action="process_money" method="post">
+                <div class="section">
+                    <h1 class="section_title">House</h1>
+                    <h2 class="section_description">(earns 2-5 golds)</h2>
+                    <input class="submit" type="submit" value="Find Gold!">
+                    <input type="hidden" value="House" name="which_section">
+                </div>
+            </form>
+            <form class="sections_container" action="process_money" method="post">
+                <div class="section">
+                    <h1 class="section_title">Casino</h1>
+                    <h2 class="section_description">(earns/takes 0-50 golds)</h2>
+                    <input class="submit" type="submit" value="Find Gold!">
+                    <input type="hidden" value="Casino" name="which_section">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="logs_container">
+        <p>Activities:</p>
+        <div class="logs">
+            {% for i in range(session['logs']|length, -1, -1) %}
+                <P style="color: {{ session['trans_color'][i] }};">{{ session['logs'][i] }}</P>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

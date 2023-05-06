@@ -1,0 +1,64 @@
+body {
+    padding: 5px 15px;
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#score_container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    align-items: center;
+}
+#score {
+    border: 1px solid black;
+    width: 150px;
+    height: 20px;
+}
+#start_again, .submit {
+    background-color: #1750A8;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    margin-top: 15px;
+}
+#forms_container {
+    display: flex;
+    justify-content: space-between;
+}
+.sections_container {
+    border: 1px solid black;
+    width: 23%;
+    height: 300px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section_description {
+    font-weight: 100;
+    font-size: medium;
+}
+#main {
+    margin-bottom: 30px;
+}
+.logs {
+    padding: 2px 10px;
+    width: 100%;
+    height: 200px;
+    overflow-y: scroll;
+    resize: none;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+#score_container p {
+    padding: 1px 5px;
+}
